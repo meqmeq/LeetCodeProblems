@@ -1,0 +1,19 @@
+def hammingWeight(n):
+    """
+    :type n: int
+    :rtype: int
+    """
+    ans = 0
+    exp = 32
+    while n != 0:
+        if n - 2 ** exp < 0:
+            exp -= 1
+        else:
+            n = n - 2 ** exp
+            ans += 1
+            exp -= 1
+
+    return ans
+
+
+print(hammingWeight(11))
