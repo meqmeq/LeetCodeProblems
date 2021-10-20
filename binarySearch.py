@@ -9,7 +9,7 @@ def binarySearch(nums, target):
     L = 0
     if len(nums) == 1 and nums[0] == target:
         return 0
-    while (R-L) > 2:
+    while (R-L) > 1:
 
         mid = (R+L)//2
         if nums[mid] == target:
